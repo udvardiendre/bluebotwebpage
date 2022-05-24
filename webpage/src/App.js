@@ -6,6 +6,7 @@ import AboutUs from "./Components/AboutUs";
 import Reference from "./Components/Reference";
 import ContactUs from "./Components/ContactUs";
 import Footer from "./Components/Footer";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -16,6 +17,13 @@ function App() {
       <Reference />
       <ContactUs />
       <Footer />
+
+      <Routes>
+        <Route path="/welcome" element={<Welcome />} />
+        <Route path="/aboutUs" element={<AboutUs />} />
+        <Route path="/reference" element={<Reference />} />
+        <Route path="/contactUs" element={<Welcome />} />
+      </Routes>
     </div>
   );
 }
